@@ -1,0 +1,12 @@
+services:
+  dev:
+    build:
+      context: .
+      dockerfile: docker/mkdocs-material/dev/Dockerfile
+    container_name: raiment-docs-dev
+    volumes:
+      - ./:/app
+    ports:
+      - "8000:8000"
+    tty: true
+    stdin_open: true

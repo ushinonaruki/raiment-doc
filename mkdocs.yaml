@@ -1,0 +1,34 @@
+site_name: Raiment Docs
+site_url: https://raiment-polyfill.org/
+
+theme:
+  name: material
+
+plugins:
+  - search:
+      lang:
+        - ja
+        - en
+  - i18n:
+      languages:
+        - locale: ja
+          name: 日本語
+          default: true
+        - locale: en
+          name: English
+      # docs/ja/, docs/en/ のフォルダ構造を採用
+      docs_structure: folder
+      # 翻訳が存在しないページがあった場合、デフォルト言語のページを表示
+      fallback_to_default: true
+      # Materialテーマ特有の内部設定（検索・ナビゲーションなど）を言語ごとに自動で切り替え
+      reconfigure_material: true
+      # 各言語ごとに独立した検索インデックスを生成
+      reconfigure_search: true
+
+nav:
+  - Home: index.md
+  - Raiment: Web/Raiment/index.md
+  - Security: Security/index.md
+  - Map: Map/index.md
+  - Logger: Logger/index.md
+  - Glossary: Glossary/index.md

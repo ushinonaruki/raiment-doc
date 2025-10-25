@@ -1,0 +1,43 @@
+name: Deploy to GitHub Pages
+
+on:
+  # mainブランチにpushされたら自動実行
+  push:
+    branches:
+      - main
+
+# このワークフローに書き込み権限を与える
+permissions:
+  contents: write
+
+# 実行する処理の集まり
+jobs:
+  deploy:
+    # Ubuntu最新版の仮想マシンで実行
+    runs-on: ubuntu-latest
+    steps:
+      # 公式のチェックアウトアクションを使用
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      # Pythonを取得する
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      # MkDocsとプラグインをインストール
+      - name: Install MkDocs and plugins
+        run: |
+          pip install --no-cache-dir \
+          mkdocs==1.5.3 \
+          mkdocs-material==9.5.15 \
+          mkdocs-static-i18n==1.2.0
+      # サイトをビルド
+      - name: Build site
+        run: mkdocs build --clean --strict
+      # GitHub Pagesへデプロイ
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
+          cname: raiment-polyfill.org
