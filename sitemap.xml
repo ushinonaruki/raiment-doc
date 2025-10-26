@@ -43,11 +43,11 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://raiment-polyfill.org/en/Web/"/>
     </url>
     <url>
-        <loc>https://raiment-polyfill.org/Web/Raiment/</loc>
+        <loc>https://raiment-polyfill.org/Web/Raiment/Guides/Introduction/</loc>
         <lastmod>2025-10-26</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="ja" href="https://raiment-polyfill.org/Web/Raiment/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://raiment-polyfill.org/en/Web/Raiment/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://raiment-polyfill.org/Web/Raiment/Guides/Introduction/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://raiment-polyfill.org/en/Web/Raiment/Guides/Introduction/"/>
     </url>
     <url>
         <loc>https://raiment-polyfill.org/en/</loc>
@@ -92,10 +92,10 @@
         <xhtml:link rel="alternate" hreflang="ja" href="https://raiment-polyfill.org/Web/"/>
     </url>
     <url>
-        <loc>https://raiment-polyfill.org/en/Web/Raiment/</loc>
+        <loc>https://raiment-polyfill.org/en/Web/Raiment/Guides/Introduction/</loc>
         <lastmod>2025-10-26</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://raiment-polyfill.org/en/Web/Raiment/"/>
-        <xhtml:link rel="alternate" hreflang="ja" href="https://raiment-polyfill.org/Web/Raiment/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://raiment-polyfill.org/en/Web/Raiment/Guides/Introduction/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://raiment-polyfill.org/Web/Raiment/Guides/Introduction/"/>
     </url>
 </urlset>
