@@ -27,7 +27,9 @@ plugins:
 
 nav:
   - Home: index.md
-  - Raiment: Web/Raiment/index.md
+  - Raiment:
+      - Guides:
+          - Introduction: Web/Raiment/Guides/Introduction.md
   - Security: Security/index.md
   - Map: Map/index.md
   - Logger: Logger/index.md
