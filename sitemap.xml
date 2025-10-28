@@ -2,98 +2,112 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
         <loc>https://raiment-polyfill.org/</loc>
-        <lastmod>2025-10-26</lastmod>
+        <lastmod>2025-10-28</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ja" href="https://raiment-polyfill.org/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://raiment-polyfill.org/en/"/>
     </url>
     <url>
         <loc>https://raiment-polyfill.org/Glossary/</loc>
-        <lastmod>2025-10-26</lastmod>
+        <lastmod>2025-10-28</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ja" href="https://raiment-polyfill.org/Glossary/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://raiment-polyfill.org/en/Glossary/"/>
     </url>
     <url>
         <loc>https://raiment-polyfill.org/Logger/</loc>
-        <lastmod>2025-10-26</lastmod>
+        <lastmod>2025-10-28</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ja" href="https://raiment-polyfill.org/Logger/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://raiment-polyfill.org/en/Logger/"/>
     </url>
     <url>
         <loc>https://raiment-polyfill.org/Map/</loc>
-        <lastmod>2025-10-26</lastmod>
+        <lastmod>2025-10-28</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ja" href="https://raiment-polyfill.org/Map/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://raiment-polyfill.org/en/Map/"/>
     </url>
     <url>
         <loc>https://raiment-polyfill.org/Security/</loc>
-        <lastmod>2025-10-26</lastmod>
+        <lastmod>2025-10-28</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ja" href="https://raiment-polyfill.org/Security/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://raiment-polyfill.org/en/Security/"/>
     </url>
     <url>
         <loc>https://raiment-polyfill.org/Web/</loc>
-        <lastmod>2025-10-26</lastmod>
+        <lastmod>2025-10-28</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ja" href="https://raiment-polyfill.org/Web/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://raiment-polyfill.org/en/Web/"/>
     </url>
     <url>
+        <loc>https://raiment-polyfill.org/Web/Raiment/Guides/CoreConcepts/</loc>
+        <lastmod>2025-10-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://raiment-polyfill.org/Web/Raiment/Guides/CoreConcepts/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://raiment-polyfill.org/en/Web/Raiment/Guides/CoreConcepts/"/>
+    </url>
+    <url>
         <loc>https://raiment-polyfill.org/Web/Raiment/Guides/Introduction/</loc>
-        <lastmod>2025-10-26</lastmod>
+        <lastmod>2025-10-28</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ja" href="https://raiment-polyfill.org/Web/Raiment/Guides/Introduction/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://raiment-polyfill.org/en/Web/Raiment/Guides/Introduction/"/>
     </url>
     <url>
         <loc>https://raiment-polyfill.org/en/</loc>
-        <lastmod>2025-10-26</lastmod>
+        <lastmod>2025-10-28</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://raiment-polyfill.org/en/"/>
         <xhtml:link rel="alternate" hreflang="ja" href="https://raiment-polyfill.org/"/>
     </url>
     <url>
         <loc>https://raiment-polyfill.org/en/Glossary/</loc>
-        <lastmod>2025-10-26</lastmod>
+        <lastmod>2025-10-28</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://raiment-polyfill.org/en/Glossary/"/>
         <xhtml:link rel="alternate" hreflang="ja" href="https://raiment-polyfill.org/Glossary/"/>
     </url>
     <url>
         <loc>https://raiment-polyfill.org/en/Logger/</loc>
-        <lastmod>2025-10-26</lastmod>
+        <lastmod>2025-10-28</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://raiment-polyfill.org/en/Logger/"/>
         <xhtml:link rel="alternate" hreflang="ja" href="https://raiment-polyfill.org/Logger/"/>
     </url>
     <url>
         <loc>https://raiment-polyfill.org/en/Map/</loc>
-        <lastmod>2025-10-26</lastmod>
+        <lastmod>2025-10-28</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://raiment-polyfill.org/en/Map/"/>
         <xhtml:link rel="alternate" hreflang="ja" href="https://raiment-polyfill.org/Map/"/>
     </url>
     <url>
         <loc>https://raiment-polyfill.org/en/Security/</loc>
-        <lastmod>2025-10-26</lastmod>
+        <lastmod>2025-10-28</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://raiment-polyfill.org/en/Security/"/>
         <xhtml:link rel="alternate" hreflang="ja" href="https://raiment-polyfill.org/Security/"/>
     </url>
     <url>
         <loc>https://raiment-polyfill.org/en/Web/</loc>
-        <lastmod>2025-10-26</lastmod>
+        <lastmod>2025-10-28</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://raiment-polyfill.org/en/Web/"/>
         <xhtml:link rel="alternate" hreflang="ja" href="https://raiment-polyfill.org/Web/"/>
     </url>
     <url>
+        <loc>https://raiment-polyfill.org/en/Web/Raiment/Guides/CoreConcepts/</loc>
+        <lastmod>2025-10-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://raiment-polyfill.org/en/Web/Raiment/Guides/CoreConcepts/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://raiment-polyfill.org/Web/Raiment/Guides/CoreConcepts/"/>
+    </url>
+    <url>
         <loc>https://raiment-polyfill.org/en/Web/Raiment/Guides/Introduction/</loc>
-        <lastmod>2025-10-26</lastmod>
+        <lastmod>2025-10-28</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://raiment-polyfill.org/en/Web/Raiment/Guides/Introduction/"/>
         <xhtml:link rel="alternate" hreflang="ja" href="https://raiment-polyfill.org/Web/Raiment/Guides/Introduction/"/>

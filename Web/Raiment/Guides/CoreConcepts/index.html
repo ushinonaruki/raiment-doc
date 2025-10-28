@@ -1,0 +1,1359 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://raiment-polyfill.org/Web/Raiment/Guides/CoreConcepts/">
+      
+      
+        <link rel="prev" href="../Introduction/">
+      
+      
+        <link rel="next" href="../../../../Security/">
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.15">
+    
+    
+      
+        <title>CoreConcepts - Raiment Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.7e359304.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#core-concepts" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href="../../../.." title="Raiment Docs" class="md-header__button md-logo" aria-label="Raiment Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Raiment Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              CoreConcepts
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="言語切り替え">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="ja" class="md-select__link">
+              日本語
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../../en/Web/Raiment/Guides/CoreConcepts/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="検索" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="検索">
+        
+        <button type="reset" class="md-search__icon md-icon" title="クリア" aria-label="クリア" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            検索を初期化
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Raiment Docs" class="md-nav__button md-logo" aria-label="Raiment Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Raiment Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Raiment
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Raiment
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Guides
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    CoreConcepts
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    CoreConcepts
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-data-plane" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Data Plane（データプレーン）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 6つの契約（責務）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-data-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Data Source（データソース）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Data Source（データソース）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 環境追従属性
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 環境追従属性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#raiment-lang" class="md-nav__link">
+    <span class="md-ellipsis">
+      raiment-lang 属性
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-substitution-engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Substitution Engine（置換エンジン）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Substitution Engine（置換エンジン）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 プレースホルダー記法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 非破壊レンダリング
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2 非破壊レンダリング">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      レンダリング時機
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 フォールバック
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-__metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. __metadata（メタデータ）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. __metadata（メタデータ）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#raiment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Raimentの責務 (構文の定義)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      外部の責務 (語彙の定義)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-raimentomjs-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. RaimentOM（JS API）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. RaimentOM（JS API）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 役割
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 コアプリミティブ（概念）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3 例（最小の書き味）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.3 例（最小の書き味）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      実装ルール（概念）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. 次に読む (See also)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. 次に読む (See also)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      ガイド (Guide)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#learn" class="md-nav__link">
+    <span class="md-ellipsis">
+      手引 (Learn)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      リファレンス (Reference)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Security/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Map/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Map
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Logger/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logger
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-data-plane" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Data Plane（データプレーン）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 6つの契約（責務）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-data-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Data Source（データソース）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Data Source（データソース）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 環境追従属性
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 環境追従属性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#raiment-lang" class="md-nav__link">
+    <span class="md-ellipsis">
+      raiment-lang 属性
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-substitution-engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Substitution Engine（置換エンジン）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Substitution Engine（置換エンジン）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 プレースホルダー記法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 非破壊レンダリング
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2 非破壊レンダリング">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      レンダリング時機
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 フォールバック
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-__metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. __metadata（メタデータ）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. __metadata（メタデータ）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#raiment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Raimentの責務 (構文の定義)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      外部の責務 (語彙の定義)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-raimentomjs-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. RaimentOM（JS API）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. RaimentOM（JS API）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 役割
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 コアプリミティブ（概念）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3 例（最小の書き味）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.3 例（最小の書き味）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      実装ルール（概念）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. 次に読む (See also)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. 次に読む (See also)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      ガイド (Guide)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#learn" class="md-nav__link">
+    <span class="md-ellipsis">
+      手引 (Learn)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      リファレンス (Reference)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="core-concepts">基本概念 / 用語 (Core Concepts)</h1>
+<p>Raimentを理解し活用するために必要な、主要概念と用語を定義します。</p>
+<h2 id="1-data-plane">1. Data Plane（データプレーン）</h2>
+<p>Raimentは、HTML/CSS/JavaScriptに続く、データバインディングのための <strong>第四のWebプレーン（Data Plane）</strong> を確立することを目指します。</p>
+<table>
+<thead>
+<tr>
+<th>プレーン</th>
+<th>技術</th>
+<th>役割</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>構造層</td>
+<td>HTML</td>
+<td>骨格</td>
+</tr>
+<tr>
+<td>見た目層</td>
+<td>CSS</td>
+<td>肌</td>
+</tr>
+<tr>
+<td>振る舞い層</td>
+<td>JavaScript</td>
+<td>運動</td>
+</tr>
+<tr>
+<td><strong>データ層</strong></td>
+<td><strong>Raiment</strong></td>
+<td>データ</td>
+</tr>
+</tbody>
+</table>
+<p>HTMLが構造を定義し、CSSが見た目を適用し、JavaScriptが振る舞いを制御するのと同様に、Raimentはデータを宣言的に流し込みます。</p>
+<p>CSSがHTMLの構造を壊さずに見た目を適用するように、RaimentはHTMLの骨格に触れることはありません。</p>
+<p>機械（AI/クローラー）によるデータ解釈コストの削減を主目的とし、人間が可読な「構造（HTML）」から、機械が処理しやすい「データ（YAML）」を完全に分離します。</p>
+<p>この分離により、AIはHTML全体をパースすることなく、データファイルのみを読み取ることで即座に情報を取得できます。</p>
+<h2 id="2-6">2. 6つの契約（責務）</h2>
+<p>RaimentがCSS/JSと並ぶ「第4のプレーン」として自立するために定義された、根本仕様です。</p>
+<table>
+<thead>
+<tr>
+<th>契約</th>
+<th>対立する層</th>
+<th>概要</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>非破壊性</td>
+<td>HTML</td>
+<td>HTMLの要素ノード（骨格）を破壊せず、textNode（内容）のみを適用</td>
+</tr>
+<tr>
+<td>環境追従性</td>
+<td>CSS/Context</td>
+<td>言語設定やテーマの変化に対し、宣言的にデータソースを切り替える責務</td>
+</tr>
+<tr>
+<td>JS API</td>
+<td>JavaScript</td>
+<td>JS層がRaiment層を命令的に操作するための公式な接点（RaimentOM）を提供</td>
+</tr>
+<tr>
+<td>Security契約</td>
+<td>Data</td>
+<td>安全なデータの定義と、サニタイズのルールを明確化</td>
+</tr>
+<tr>
+<td>A11y契約</td>
+<td>User</td>
+<td>動的な内容変更を支援技術へ適切に伝達する責務</td>
+</tr>
+<tr>
+<td>Tooling契約</td>
+<td>Developer</td>
+<td>開発者ツールがRaimentの状態を可視化・デバッグできるAPIを提供</td>
+</tr>
+</tbody>
+</table>
+<p>これら6つの契約は、それぞれ対応するガイドページで詳細に説明されます。</p>
+<ul>
+<li>非破壊性の設計原則 → Design Guidelines</li>
+<li>環境追従性の実装 → Performance Considerations</li>
+<li>JS APIの詳細仕様 → Reference（RaimentOM APIリファレンス）</li>
+<li>Security契約の詳細 → Security Considerations</li>
+<li>A11y契約の詳細 → Accessibility Considerations</li>
+<li>Tooling契約の実装 → Best Practices</li>
+</ul>
+<h2 id="3-data-source">3. Data Source（データソース）</h2>
+<p>外部ファイル（YAML）でデータを定義し、<code>&lt;link rel="raiment"&gt;</code> でHTMLに関連付けます。</p>
+<pre><code class="language-html">&lt;link rel=&quot;raiment&quot; href=&quot;data.yaml&quot;&gt;
+</code></pre>
+<p>データソースは <code>&lt;link&gt;</code> タグを使用し、<code>rel</code> 属性に <code>raiment</code> を指定します。</p>
+<p>データ形式の解決は、HTTPレスポンスの <code>Content-Type</code> ヘッダ、<code>type</code> 属性、ファイル拡張子の順で行われます。</p>
+<p>複数の <code>&lt;link&gt;</code> が存在する場合、すべてのリソース取得が完了するまでレンダリングは開始されません。</p>
+<h3 id="31">3.1 環境追従属性</h3>
+<p>環境の変化に応じて、宣言的にデータソースを切り替える仕組みです。</p>
+<h4 id="raiment-lang"><code>raiment-lang</code> 属性</h4>
+<p><code>&lt;html&gt;</code> タグの <code>lang</code> 属性値と一致する <code>&lt;link&gt;</code> タグのみを有効化します。</p>
+<p><code>lang</code> 属性が変更された場合、Raimentは自動でデータソースを再評価し、再描画します。</p>
+<pre><code class="language-html">&lt;link rel=&quot;raiment&quot; href=&quot;data.ja.yaml&quot; raiment-lang=&quot;ja&quot;&gt;
+&lt;link rel=&quot;raiment&quot; href=&quot;data.en.yaml&quot; raiment-lang=&quot;en&quot;&gt;
+</code></pre>
+<h2 id="4-substitution-engine">4. Substitution Engine（置換エンジン）</h2>
+<p>データソースから取得したデータを、HTML内のプレースホルダーに適用する仕組みです。</p>
+<p>Substitution Engineは「何を置換し、どのように処理するか」を定義します。</p>
+<h3 id="41">4.1 プレースホルダー記法</h3>
+<p>HTML内でデータを埋め込む位置を示すマーカーです。</p>
+<p>テキストノードおよび属性値に使用できます。</p>
+<table>
+<thead>
+<tr>
+<th>記法</th>
+<th>動作</th>
+<th>セキュリティ処理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>(( ... ))</code></td>
+<td>HTMLエスケープあり</td>
+<td>Raiment Coreがエスケープによる出力整形を実施</td>
+</tr>
+<tr>
+<td><code>((( ... )))</code></td>
+<td>HTMLエスケープなし</td>
+<td>外部のSecurity Engineに完全委譲</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-html">&lt;h1&gt;(( post.title ))&lt;/h1&gt;
+&lt;p&gt;(( post.author ))&lt;/p&gt;
+&lt;div&gt;((( post.htmlContent )))&lt;/div&gt;
+</code></pre>
+<p><code>(( ... ))</code> は安全な文字列への整形（<code>&lt;</code> を <code>&amp;lt;</code> に変換など）を自動で行います。</p>
+<p><code>((( ... )))</code> は非エスケープ指定としてマークし、実際のXSS防御は外部のSecurity Engineに委譲します。</p>
+<h3 id="42">4.2 非破壊レンダリング</h3>
+<p>RaimentはDOMの要素ノード（骨格）を一切変更せず、textNode（内容）のみを管理対象とします。</p>
+<p>CSSがRender Treeにスタイルを適用する思想を模倣した設計です。</p>
+<h4 id="_1">レンダリング時機</h4>
+<ul>
+<li><strong>初回描画</strong>:
+  <code>DOMContentLoaded</code> 後に一括適用</li>
+<li><strong>動的更新</strong>:
+  <code>MutationObserver</code> による自動監視は行わず、JS API（<code>window.raiment.refresh()</code>）による明示的なトリガーのみ</li>
+</ul>
+<p>この設計により、Raimentは既存のHTML構造やCSSセレクタ、JavaScript操作に一切影響を与えません。</p>
+<h3 id="43">4.3 フォールバック</h3>
+<p>データパスの解決に失敗した値（<code>undefined</code>、<code>null</code> を含む）は、一律で空文字 <code>""</code> としてレンダリングされます。</p>
+<pre><code class="language-yaml">user:
+  name: &quot;Taro Yamada&quot;
+  # age は未定義
+</code></pre>
+<pre><code class="language-html">&lt;h1&gt;(( user.name ))&lt;/h1&gt;  &lt;!-- &quot;Taro Yamada&quot; --&gt;
+&lt;p&gt;(( user.age ))&lt;/p&gt;      &lt;!-- &quot;&quot; (空文字) --&gt;
+</code></pre>
+<p>配列やオブジェクトが参照された場合も、一律で空文字 <code>""</code> としてレンダリングされます。</p>
+<p>再試行や代替ソースの読み込みなどの挙動は禁止です。</p>
+<p>複雑な分岐処理や再試行による肥大化を防ぐため、フォールバック動作は極めてシンプルに設計されています。</p>
+<h2 id="5-__metadata">5. <code>__metadata</code>（メタデータ）</h2>
+<p>データオブジェクト内に <code>__metadata</code> キーが存在する場合、その配下の値群は「外部仕様で定義されたメタ情報」として扱われます。</p>
+<p><code>__metadata</code> は、Substitution Engineの処理対象外となる領域を定義する概念です。</p>
+<h3 id="raiment">Raimentの責務 (構文の定義)</h3>
+<p>Raimentは <code>__metadata</code> という「場所（構文）」を定義するだけであり、その配下の内容の意味・構文・解釈については一切関知しません。</p>
+<p>レンダリング（<code>(( ... ))</code>）の対象からも完全に除外されます。</p>
+<h3 id="_2">外部の責務 (語彙の定義)</h3>
+<p>__metadata の意味・構文・解釈をSEOやAI（RAG）のヒントとして利用するのは、クローラーやAIなど外部エンジンの責務です。</p>
+<p>これにより、外部の団体（GoogleやW3C等）が独自の語彙（<code>reviewed-by</code>、<code>license</code> 等）を自由に定義できます。</p>
+<pre><code class="language-yaml"># post.yaml
+
+# --- Raimentが処理するデータ ---
+title: &quot;Raiment 仕様書&quot;
+author: &quot;Taro Yamada&quot;
+
+# --- Raimentが処理しないメタ情報 ---
+__metadata:
+  # 1. JSON-LD (AI/クローラーの標準語彙)
+  &quot;@context&quot;: &quot;https://schema.org&quot;
+  &quot;@type&quot;: &quot;Article&quot;
+  &quot;headline&quot;: &quot;Raiment 仕様書&quot;
+  # 2. 外部団体が定義する独自の語彙
+  &quot;reviewed-by&quot;: &quot;google.com&quot;
+  &quot;license&quot;: &quot;CC-BY-4.0&quot;
+</code></pre>
+<p><code>__metadata</code> は、Raimentと外部エンジンの責務分離を明確化し、Raimentの主目的である「機械可読性の向上」を実現する中核概念です。</p>
+<p>AIは <code>__metadata</code> を読み取ることで、HTMLを解析することなく構造化されたメタ情報を直接取得できます。</p>
+<h2 id="6-raimentomjs-api">6. RaimentOM（JS API）</h2>
+<p>JavaScript層がRaiment層を命令的に操作するための公式な接点です。</p>
+<p>6つの契約の一つ（JS API契約）として定義されています。</p>
+<h3 id="61">6.1 役割</h3>
+<ul>
+<li>単一パス原子操作の提供（UIデータ編集の基底語彙）</li>
+<li>観測と再同期のフック提供（observe/refresh）</li>
+<li>上位（React/Vue 等）やSDKの糖衣APIからの呼び出し先（常にプリミティブへ正規化）</li>
+</ul>
+<h3 id="62">6.2 コアプリミティブ（概念）</h3>
+<ul>
+<li>
+<p><code>window.raiment.get(path)</code>
+  指定パスの現在値を取得（読み取り専用）。</p>
+</li>
+<li>
+<p><code>window.raiment.set(path, value)</code>
+  丸ごと置換。
+  オブジェクト/配列/スカラーをそのまま入れ替える。</p>
+</li>
+<li>
+<p><code>window.raiment.merge(path, partial)</code>
+  同一階層の部分更新。
+  キーの追加/上書きのみ（shallow 限定／削除非対応）。</p>
+</li>
+<li>
+<p><code>window.raiment.unset(path)</code>
+  オブジェクトのキー削除。
+  <code>path</code> が指すプロパティを取り除く。</p>
+</li>
+<li>
+<p><code>window.raiment.splice(path, index, deleteCount, ...values)</code>
+  配列の位置編集（挿入/削除/置換/並べ替えの基底）。
+  <code>index</code> 位置で <code>deleteCount</code> 個削除し、<code>values</code> を挿入。
+  配列操作はこのコアプリミティブのみでの対応。</p>
+</li>
+<li>
+<p><code>window.raiment.add(path, delta)</code>
+  数値の加減算（原子的 read–modify–write）。
+  減算は <code>delta</code> を負値に。</p>
+</li>
+<li>
+<p><code>window.raiment.observe(path, callback)</code>
+  指定パスの変更を購読。
+  購読解除関数を返す。</p>
+</li>
+<li>
+<p><code>window.raiment.refresh(scope?)</code>
+  指定スコープ（省略時は全体）のDOMバインディングを再同期。</p>
+</li>
+<li>
+<p><code>window.raiment.snapshot()</code>
+  全データの読み取り専用の複製（スナップショット）を返す（DevTools/外部エンジン向け）。</p>
+</li>
+</ul>
+<p>複合操作（deep-merge、unique push、rename、CAS、トランザクション等）は上位のSDKで提供され、内部で上記プリミティブに変換されます。</p>
+<h3 id="63">6.3 例（最小の書き味）</h3>
+<pre><code class="language-javascript">// 読み取り
+const title = window.raiment.get('post.title');
+
+// 置換（再描画は明示）
+window.raiment.set('post.title', '新しいタイトル');
+window.raiment.refresh('post');
+
+// オブジェクトの部分更新（shallow）
+window.raiment.merge('user', { nickname: 'ta' });
+
+// オブジェクトのキー削除
+window.raiment.unset('user.nickname');
+
+// 配列: 2番目に要素を挿入
+window.raiment.splice('post.tags', 1, 0, 'raiment');
+
+// 数値: 在庫を5減らす（原子的）
+window.raiment.add('inventory.stock', -5);
+
+// 変更の購読
+const off = window.raiment.observe('post.title', (next) =&gt; {
+  console.debug('title changed:', next);
+});
+// 変更の購読を解除
+off();
+
+// スナップショット（読み取り専用）
+const dump = window.raiment.snapshot();
+</code></pre>
+<h4 id="_3">実装ルール（概念）</h4>
+<p>各プリミティブは型に厳格（対象が期待型でなければ <code>TypeError</code>）かつ原子的に実行。</p>
+<p><code>merge</code> は shallow 限定、削除は <code>unset</code> に分離、配列編集は常に <code>splice</code> で表現、数値演算は <code>add</code> に統一。</p>
+<p>RaimentOM は、Core Concepts では最小語彙と責務の境界のみ定義する。</p>
+<p>詳細な引数検証、エラー仕様、バッチ/トランザクション、SDK糖衣API（例: <code>push</code>, <code>reorder</code>, <code>deepMerge</code>, <code>compareAndSet</code> 等）の挙動は Reference を参照。</p>
+<h2 id="7-see-also">7. 次に読む (See also)</h2>
+<h3 id="guide">ガイド (Guide)</h3>
+<ul>
+<li><strong><a href="../Introduction/">Introduction</a></strong> - 概要</li>
+</ul>
+<h3 id="learn">手引 (Learn)</h3>
+<h3 id="reference">リファレンス (Reference)</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": [], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version": "\u30d0\u30fc\u30b8\u30e7\u30f3\u5207\u308a\u66ff\u3048"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.bd41221c.min.js"></script>
+      
+    
+  </body>
+</html>
