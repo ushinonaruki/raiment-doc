@@ -30,6 +30,7 @@ nav:
   - Raiment:
       - Guides:
           - Introduction: Web/Raiment/Guides/Introduction.md
+          - CoreConcepts: Web/Raiment/Guides/CoreConcepts.md
   - Security: Security/index.md
   - Map: Map/index.md
   - Logger: Logger/index.md

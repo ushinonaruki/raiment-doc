@@ -50,6 +50,8 @@ user:
 
 ### ガイド (Guide)
 
+- **[CoreConcepts](./CoreConcepts.md)** - 基本概念 / 用語
+
 ### 手引 (Learn)
 
 ### リファレンス (Reference)
